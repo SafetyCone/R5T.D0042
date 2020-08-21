@@ -1,0 +1,4 @@
+R5T.D0042.Base - Base library for the ITextFileSerializer<T> service.
+
+Goals
+
