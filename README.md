@@ -1,2 +1,2 @@
 # R5T.D0042
-ITextFileSerializer&lt;T> library.
+ITextFileSerializer&lt;T> service library.
