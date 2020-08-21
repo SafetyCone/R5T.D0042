@@ -1,0 +1,4 @@
+R5T.D0042 - ITextFileSerializer<T> service library.
+
+Goals
+
