@@ -11,10 +11,9 @@ using R5T.Stagira;
 namespace R5T.D0042.Stagira
 {
     public abstract class TypedStringsListTextFileSerializerBase<TList, TTypedString> : ITextFileSerializer<TList>
-        where TList : TypedStringsList<TTypedString>
+        where TList : TypedStringsList<TTypedString>, new()
         where TTypedString : TypedString
     {
-        protected abstract Func<IEnumerable<TTypedString>, TList> TypedStringListConstructor { get; }
         protected abstract Func<string, TTypedString> TypedStringConstructor { get; }
 
 
@@ -22,9 +21,11 @@ namespace R5T.D0042.Stagira
         {
             var values = File.ReadAllLines(textFilePath).Select(this.TypedStringConstructor);
 
-            var output = this.TypedStringListConstructor(values);
+            var list = new TList();
 
-            return Task.FromResult(output);
+            list.Values.AddRange(values);
+
+            return Task.FromResult(list);
         }
 
         public Task Serialize(string textFilePath, TList list, bool overwrite = true)

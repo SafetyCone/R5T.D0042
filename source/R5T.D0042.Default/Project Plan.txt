@@ -1,0 +1,4 @@
+R5T.D0042.Default - Default implementations library for the ITextFileSerializer<T> service.
+
+Goals
+
