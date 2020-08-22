@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 
 
 namespace R5T.D0042
@@ -15,12 +16,12 @@ namespace R5T.D0042
         /// Deserializes an object from a text file.
         /// </summary>
         /// <param name="filePath">The rooted text file path to use.</param>
-        T Deserialize(string textFilePath);
+        Task<T> Deserialize(string textFilePath);
 
         /// <summary>
         /// Serializes an object to a text file.
         /// </summary>
         /// <param name="textFilePath">The rooted text file path to use.</param>
-        void Serialize(string textFilePath, T value, bool overwrite = true);
+        Task Serialize(string textFilePath, T value, bool overwrite = true);
     }
 }

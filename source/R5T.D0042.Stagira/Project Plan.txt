@@ -1,0 +1,4 @@
+R5T.D0042.Stagira - Library for Stagira typed-string ITextFileSerializer<T> service implementations.
+
+Goals
+
