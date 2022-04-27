@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
 
-using R5T.D0044;
-
 using R5T.Magyar;
-using R5T.Magyar.IO;
+
+using R5T.D0044;
 
 
 namespace R5T.D0042.Default

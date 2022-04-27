@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Threading.Tasks;
 
+using R5T.T0064;
+
 
 namespace R5T.D0042
 {
@@ -10,7 +12,8 @@ namespace R5T.D0042
     /// <remarks>
     /// * Upon writing, note that the optional overwrite argument default value is true.
     /// </remarks>
-    public interface ITextFileSerializer<T>
+    [ServiceDefinitionMarker]
+    public interface ITextFileSerializer<T> : IServiceDefinition
     {
         /// <summary>
         /// Deserializes an object from a text file.
