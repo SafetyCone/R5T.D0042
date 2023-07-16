@@ -18,7 +18,7 @@ namespace R5T.D0042
         /// <summary>
         /// Deserializes an object from a text file.
         /// </summary>
-        /// <param name="filePath">The rooted text file path to use.</param>
+        /// <param name="textFilePath">The rooted text file path to use.</param>
         Task<T> Deserialize(string textFilePath);
 
         /// <summary>
